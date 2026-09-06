@@ -1,0 +1,118 @@
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background-color: #1f2937;
+  color: #f9fafb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.header .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.header .navbar .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.header .navbar .nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.header .navbar .nav-links li a:hover {
+  color: #38bdf8;
+}
+
+.header .header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header .header-icons > a {
+  color: #e5e7eb;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header .header-icons > a:hover {
+  color: #38bdf8;
+}
+
+/* Sign In / Sign Up */
+.header .auth-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 8px;
+  padding-left: 16px;
+  border-left: 1px solid #374151;
+}
+
+.header .auth-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.header .auth-links .signin-btn {
+  color: #e5e7eb;
+  border: 1px solid #4b5563;
+}
+
+.header .auth-links .signin-btn:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.header .auth-links .signup-btn {
+  color: #1f2937;
+  background-color: #38bdf8;
+}
+
+.header .auth-links .signup-btn:hover {
+  background-color: #0ea5e9;
+}
+
+/* Basic responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 20px;
+  }
+
+  .header .navbar .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .header .auth-links {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
