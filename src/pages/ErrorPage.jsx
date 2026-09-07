@@ -1,8 +1,16 @@
-import { useRouteError, NavLink } from "react-router-dom";
+import { useNavigate,useRouteError } from "react-router-dom";
 import "./ErrorPage.css";
 
 export const ErrorPage = () => {
     const error = useRouteError();
+
+    const navigate = useNavigate();
+    
+    const handleGoBack = () => {
+        // navigate("/");
+        navigate(-1);
+    }
+    
     console.log(error);
 
     if (error.status === 404) {
@@ -22,9 +30,10 @@ export const ErrorPage = () => {
                         <p className="p-b">
                             Let's get you back on track
                         </p>
-                        <NavLink to="/" className="back-home-btn">
+                        {/* <NavLink to="/" className="back-home-btn">
                             Back to Home
-                        </NavLink>
+                        </NavLink> */}
+                        <button className="back-home-btn" onClick={handleGoBack}>Go Back</button>
                     </div>
                 </div>
             </section>
@@ -43,9 +52,12 @@ export const ErrorPage = () => {
                 <div className="text-center">
                     <p className="p-a">Something went wrong</p>
                     <p className="p-b">Please try again later</p>
-                    <NavLink to="/" className="back-home-btn">
+                    
+                    {/* <NavLink to="/" className="back-home-btn">
                         Back to Home
-                    </NavLink>
+                    </NavLink> */}
+
+                    <button className="back-home-btn" onClick={handleGoBack}>Go Back</button>
                 </div>
             </div>
         </section>
