@@ -1,0 +1,115 @@
+/* Card */
+.hero-container {
+  list-style: none;
+  width: 220px;
+}
+
+.hero-container .main-container {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-container .main-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.hero-container .poster-container {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+}
+
+.hero-container .poster-container .poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay */
+.hero-container .ticket-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(17, 24, 39, 0.55);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.hero-container .main-container:hover .ticket-container {
+  opacity: 1;
+}
+
+.hero-container .ticket-content {
+  transform: translateY(8px);
+  transition: transform 0.25s ease;
+}
+
+.hero-container .main-container:hover .ticket-content {
+  transform: translateY(0);
+}
+
+.hero-container .ticket_buy-btn {
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+  background-color: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hero-container .ticket_buy-btn:hover {
+  background-color: #0ea5e9;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .hero-container {
+    width: 150px;
+  }
+}
+/* Movies Grid */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  list-style: none;
+}
+
+.grid-four--cols {
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .grid-four--cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-four--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-four--cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
